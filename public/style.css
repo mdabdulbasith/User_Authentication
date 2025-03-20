@@ -1,25 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #4a0072, #8c29a7); /* Dark purple gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: white;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-div {
-    background: white;
-    padding: 20px;
-    margin: 10px auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
+
+.box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
 
 h2 {
-    color: #555;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 form {
@@ -28,25 +58,40 @@ form {
 }
 
 input {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin: 12px 0;
+    padding: 12px;
+    border: 2px solid #d1d1d1;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #ffffff; /* White focus */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 button {
-    padding: 10px;
-    background-color: #8c29a7;
+    padding: 12px;
+    background: linear-gradient(90deg, #ff6f61, #ff4757);
     color: white;
+    font-weight: 600;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #71188a;
+    background: linear-gradient(90deg, #ff3b3b, #e63946);
+    box-shadow: 0 4px 8px rgba(255, 71, 87, 0.4);
 }
 
-#profile-section {
-    display: none;
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
